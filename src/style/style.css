@@ -1,0 +1,116 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#scrolling-text {
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    width: 100%; /* Conteneur prend toute la largeur du parent */
+    position: relative;
+}
+
+#scrolling-message {
+    display: inline-block;
+    white-space: nowrap; /* Assure que le texte reste sur une seule ligne */
+    animation: scroll 10s linear infinite; /* Durée augmentée pour voir le texte mieux */
+}
+
+.paused {
+    animation-play-state: paused; /* Met l'animation en pause */
+}
+
+  
+/* Old Fashion Font */
+  @font-face {
+    font-family: 'oldfashion';
+    src: url('../fonts/OldFashioned-Script.otf') format('truetype');
+  }
+
+/* Old Fashion Font */
+@font-face {
+    font-family: 'walbaum';
+    src: url('../fonts/walbaum-regular.ttf') format('truetype');
+  }
+  
+  .h1-custom {
+    font-family: 'oldfashion', serif;
+  }
+
+  .h2-custom {
+    font-family: 'walbaum', serif;
+  }
+
+  .uppercase-custom {
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-uppercase-custom {
+    letter-spacing: 0.18rem;
+    font-size: 0.8rem;
+  }
+
+/* Cacher la barre de défilement sur les appareils mobiles */
+@media (max-width: 640px) {
+    ::-webkit-scrollbar {
+      width: 6px;  /* Taille de la scrollbar */
+      height: 6px;  /* Taille de la scrollbar horizontale */
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(31, 41, 55);  /* Fond de la barre de défilement */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: rgba(31, 41, 55);  /* Couleur de la barre de défilement */
+      border: 3px solid rgba(0, 0, 0, 0.1);  /* Effet de bordure autour de la barre */
+    }
+  }
+  
+  /* Cacher la barre de défilement par défaut sur les grands écrans */
+  ::-webkit-scrollbar {
+    width: 8px;  /* Taille de la scrollbar */
+    height: 5px;  /* Taille de la scrollbar horizontale */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /* Fond de la barre de défilement */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(31, 41, 55);  /* Couleur de la barre de défilement */
+    border: 3px solid rgba(0, 0, 0, 0.1);  /* Effet de bordure autour de la barre */
+  }
+  
+  /* Effet au survol de la scrollbar */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(31, 41, 55);  /* Couleur plus claire au survol */
+  }
+  
+/* Empêcher la sélection de texte */
+.no-select {
+    user-select: none; /* Empêche la sélection du texte */
+    cursor: pointer;
+}
+
+
+/* Désactive le défilement quand la modal est ouverte */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Positionner les boutons de zoom et de fermeture au-dessus de l'image */
+.modal-content {
+    position: relative;
+    z-index: 10; /* S'assurer que les boutons soient au-dessus */
+}
+
+/* Le conteneur de l'image garde son positionnement et le zoom n'affecte pas la position */
+.zoomable-image {
+    transition: transform 0.3s ease; /* Ajouter une transition fluide */
+    transform-origin: center center; /* Centrer le zoom */
+}
