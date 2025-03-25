@@ -1,4 +1,4 @@
-# L'Atelier d'Ayssa - Site de vente de bijoux
+# L'Atelier d'Ayssa - Site de vente de bijoux 💍​
 
 Bienvenue sur le site de l'Atelier d'Ayssa, une boutique en ligne dédiée à la vente de bijoux faits main. Ce site a été conçu pour offrir une expérience utilisateur fluide et moderne, tout en mettant en avant les créations uniques de l'atelier.
 
